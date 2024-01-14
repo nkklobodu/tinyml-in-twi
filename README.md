@@ -14,7 +14,7 @@ This project was motivated by the valuable insights gained from [Shawn Hymel's](
 
 Also, the foundational resources provided in Shawn Hymel's [Keyword Spotting with Edge Impulse repository](https://github.com/ShawnHymel/ei-keyword-spotting), which includes a suite of tools and demo projects, were instrumental in kick-starting my own work.
 
-Particularly, his [`dataset-curation.py`](https://github.com/ShawnHymel/ei-keyword-spotting/blob/master/dataset-curation.py) script was instrumental in the process of data curation and augmention. It enabled the seamless integration of custom keywords in Twi with the [Google Speech Commands dataset](http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz) and the incorporation of background noise into the samples, both of which were vital to the success of this project.
+Particularly, his [`dataset-curation.py`](https://github.com/ShawnHymel/ei-keyword-spotting/blob/master/dataset-curation.py) script was instrumental in the process of data curation and augmention. It enabled the seamless integration of custom keywords in Twi with the [Google Speech Commands dataset](https://blog.research.google/2017/08/launching-speech-commands-dataset.html) and the incorporation of background noise into the samples, both of which were vital to the success of this project.
 
 
 ## Stuff
