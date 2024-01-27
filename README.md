@@ -144,7 +144,7 @@ Training the model without a feature extraction—on the raw audio—could resul
 
     <img src="assets/images/mfcc-computation-diagram.png" alt = "MFCC computation diagram">
     <br><br>
-    <img src="assets/images/feature-explorer-diagram.png" alt = "Feature            explorer diagram">
+    <img src="assets/images/feature-explorer-diagram.png" alt = "Feature explorer diagram">
 
  * This process was repeated across the audio sample to produce 49 overlapping frames, each yielding 13 MFCCs. The end result of this MFCC computation resembled a two-dimensional representation akin to an image, capturing the essential characteristics of the sound over time.
 
@@ -200,7 +200,11 @@ In these tests, the model demonstrated a high level of accuracy, achieving **97.
 
 ### 7. Model Deployment
 
-The final step of the project involved deploying the model to the Arduino Nano 33 BLE Sense rev2. This process was facilitated by the Edge Impulse platform, which provides a library of pre-built examples for various hardware platforms.
+
+
+### 8. Modifications
+
+
 
 ## Results and Discussion
 
