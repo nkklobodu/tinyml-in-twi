@@ -209,6 +209,12 @@ In these tests, the model demonstrated a high level of accuracy, achieving **97.
 ## Results and Discussion
 
 
+## License
+<!-- 
+We need multiple licenses here since this a hardware and software project 
+
+Check https://choosealicense.com/
+-->
 
 <!--
 
