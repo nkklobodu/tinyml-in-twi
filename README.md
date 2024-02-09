@@ -1,5 +1,9 @@
 # TinyML in Twi: Voice-Controlled Lamp for Home Automation in Ghanaian Homes
 
+> [!IMPORTANT]
+> The README is incomplete—yet.
+> Stay tuned. It will be ready soon.
+
 <!-- image of project -->
 <img src="assets/images/project-setup-with-Nano22BLESense-and-bulb.jpg" alt = "Project image" width="780">
 
@@ -67,6 +71,7 @@ dataset/
 
 > [!NOTE]
 > During the export phase, I downsampled the audio samples from their original 44.1 kHz to 16 kHz and reduced the bit depth from 32-bit float to 16-bit PCM. This adjustment is in line with the specifications of the Arduino Nano 33 BLE Sense rev2 which samples at 16 kHz with a 16-bit depth.  
+> 
 > Although these modifications are typically handled by the `dataset-curation.py` script during the post-augmentation phase, I preemptively applied these settings to ensure compatibility and facilitate potential adjustments in future project phases.
 
 
@@ -93,15 +98,15 @@ Tree structure of the curated and augmented dataset:
 dataset/
 ├── keywords_curated/
 │   ├── _noise/
-│   │   ├── _noise.0001.wav
+│   │   ├── _noise.0000.wav
 │   │   ├── ...
 │   │   └── _noise.1499.wav
 │   ├── _unknown/
-│   │   ├── _unknown.0001.wav
+│   │   ├── _unknown.0000.wav
 │   │   ├── ...
 │   │   └── _unknown.1499.wav
 │   ├── dum/
-│   │   ├── dum.0001.wav
+│   │   ├── dum.0000.wav
 │   │   ├── ...
 │   │   └── dum.1499.wav
 │   ├── sɔ/
