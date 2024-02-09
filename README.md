@@ -1,7 +1,7 @@
 # TinyML in Twi: Voice-Controlled Lamp for Home Automation in Ghanaian Homes
 
 > [!IMPORTANT]
-> The README is incomplete—yet.
+> The README is not complete—yet.
 > Stay tuned. It will be ready soon.
 
 <!-- image of project -->
