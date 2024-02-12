@@ -9,7 +9,7 @@
 
 
 
-This project presents a practical application of tinyML, focusing on home automation through voice control in Twi, a major Ghanaian dialect. Leveraging a machine learning model trained via Edge Impulse on numerous Twi audio samples, the system recognizes the commands 'Sɔ' and 'Dum'—Twi for 'on' and 'off'—to control a lamp. This approach addresses the linguistic barrier faced by many Ghanaians when interacting with technology, which typically centers around English and other major foreign languages. By enabling Twi speakers to operate home devices with their native language, the project not only fosters inclusivity but also paves the way for integrating other local languages into technological interfaces.
+This project presents a practical application of tinyML, focusing on home automation through voice control in Twi, a major Ghanaian dialect. Leveraging a machine learning model trained via Edge Impulse on numerous Twi audio samples, the system recognizes the commands 'Sɔ' and 'Dum'—Twi for 'on' and 'off'—to control a lamp. This approach addresses the linguistic barrier faced by many Ghanaians when interacting with technology, which typically centers around English and other major foreign languages. By enabling Twi speakers to operate home devices in their native language, the project not only fosters inclusivity but also paves the way for integrating other local languages into technological interfaces.
 
 
 ## Acknowledgements
@@ -18,7 +18,7 @@ This project was motivated by the valuable insights gained from [Shawn Hymel's](
 
 Also, the foundational resources provided in Shawn Hymel's [Keyword Spotting with Edge Impulse repository](https://github.com/ShawnHymel/ei-keyword-spotting), which includes a suite of tools and demo projects, were instrumental in kick-starting my own work.
 
-Particularly, his [`dataset-curation.py`](https://github.com/ShawnHymel/ei-keyword-spotting/blob/master/dataset-curation.py) script was instrumental in the process of data curation and augmention. It enabled the seamless integration of custom keywords in Twi with the [Google Speech Commands dataset](https://blog.research.google/2017/08/launching-speech-commands-dataset.html) and the incorporation of background noise into the samples, both of which were vital to the success of this project.
+Particularly, his [`dataset-curation.py`](https://github.com/ShawnHymel/ei-keyword-spotting/blob/master/dataset-curation.py) script was instrumental in the process of data curation and augmentation. It enabled the seamless integration of custom keywords in Twi with the [Google Speech Commands dataset](https://blog.research.google/2017/08/launching-speech-commands-dataset.html) and the incorporation of background noise into the samples, both of which were vital to the success of this project.
 
 
 ## Stuff
@@ -51,7 +51,7 @@ In Adobe Audition, I placed markers around the desired 1-second samples and expo
 
 The outcome of this process was a total of `50nnn` .wav files, evenly divided, with an equal number of `25nnn` samples for each keyword.
 
-Tree structure of the unprocessed dataset:
+The tree structure of the unprocessed dataset:
 ```
 dataset/
 ├── keywords_exported/
@@ -93,7 +93,7 @@ The augmentation resulted in a well-organized dataset, categorized into:
 
 The dataset, balanced across these four categories, comprised 1500 one-second clips per class. I transferred the completed dataset to the [`dataset/keywords_curated/`](/dataset/keywords_curated/) directory on my local machine, ready for the data upload phase.
 
-Tree structure of the curated and augmented dataset:
+The tree structure of the curated and augmented dataset:
 ```
 dataset/
 ├── keywords_curated/
@@ -141,7 +141,7 @@ Post-upload, I conducted a verification step on the Edge Impulse platform under 
 
 ### 4. Audio Feature Extraction
 
-Training the model without a feature extraction—on the raw audio—could result in the model learning based on volume and position of utterence. These features would not make ensure an accurate and robust model. It was necessary to extract features that mimic how humans perceive sounds.
+Training the model without a feature extraction—on the raw audio—could result in the model learning based on volume and position of utterance. These features would not ensure an accurate and robust model. It was necessary to extract features that mimic how humans perceive sounds.
 
  * For each audio clip, the Fast Fourier Transform (FFT) is obtained over a 1000 millisecond frame, with a stride of 500 milliseconds between successive frames. Frequencies below 300 Hz were excluded as they generally do not contain information pertinent to human speech.
 
@@ -166,7 +166,7 @@ Here is a breakdown of the network architecture:
 
  * **Reshape Layer:** This layer restructures the input into a 13-column matrix, enabling image-like processing in subsequent convolutional layers.
 
- * **1D Convolution/Pooling Layer:** The reshaped data is processed through a 1D convolutional layer with 8 neurons, using a kernel size of 3. This enables the detection of patterns over three adjacent features. A max pooling operation with 1x2 window size follows, reducing computational load and enhancing feature detection robustness.
+ * **1D Convolution/Pooling Layer:** The reshaped data is processed through a 1D convolutional layer with 8 neurons, using a kernel size of 3. This enables the detection of patterns over three adjacent features. A max pooling operation with a 1x2 window size follows, reducing computational load and enhancing feature detection robustness.
 
     <img src="assets/images/1d-convolution-diagram.png" alt = "1D convolution diagram">
     <br><br>
